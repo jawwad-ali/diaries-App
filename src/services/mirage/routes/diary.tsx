@@ -42,7 +42,7 @@ export const updateDiary = (schema: any, req: Request): Diary | Response => {
         const diary = schema.diaries.find(req.params.id);
         const data = JSON.parse(req.requestBody) as Partial<Diary>;
         const now = dayjs().format();
-        
+
         diary.update({
             ...data,
             updatedAt: now,
@@ -69,7 +69,7 @@ export const addEntry = (schema: any, req: Request): { diary: Diary; entry: Entr
     try {
 
         const diary = schema.diaries.find(req.params.id)
-        const { title, content } = JSON.parse(req.requestBody) as Partial<Diary>
+        const { title, content } = JSON.parse(req.requestBody) as Partial<Entry>
 
         const now = dayjs().format();
 
