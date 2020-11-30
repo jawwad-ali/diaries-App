@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Certificate } from 'crypto';
 import { User } from '../../interfaces/user.interface';
 
 const user = createSlice({
