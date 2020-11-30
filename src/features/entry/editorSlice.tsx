@@ -4,8 +4,8 @@ import { Entry } from '../../interfaces/entry.interface';
 interface EditorState {
     canEdit: boolean
     currentlyEditing: Entry | null
-    activeDiaryId: string | null
-}
+    activeDiaryId: string | null 
+}  
 
 const initialState: EditorState = {
     canEdit: false,
@@ -21,7 +21,7 @@ const editor = createSlice({
             state.canEdit = payload != null ? payload : !state.canEdit
         },
 
-        setCurrentlyEdit(state, { payload }: PayloadAction<Entry | null>) {
+        setCurrentlyEditing(state, { payload }: PayloadAction<Entry | null>) {
             state.currentlyEditing = payload
         },
 
@@ -30,5 +30,5 @@ const editor = createSlice({
         }
     }
 })
-export const { setCanEdit, setCurrentlyEdit, setActiveDiaryId } = editor.actions
+export const { setCanEdit, setCurrentlyEditing, setActiveDiaryId } = editor.actions
 export default editor.reducer
