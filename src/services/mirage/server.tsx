@@ -12,7 +12,7 @@ export const handleErrors = (error: any, message: string) => {
 }
 
 export const setupServer = (env?: string): Server => {
-    return new Server({
+    return new Server({ 
         environment: env ?? 'development',
 
         models: {
