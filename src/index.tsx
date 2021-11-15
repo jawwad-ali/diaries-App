@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 if (process.env.NODE_ENV === "development") {
-  setupServer()
+  setupServer() 
 }
 
 ReactDOM.render(

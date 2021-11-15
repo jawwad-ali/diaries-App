@@ -12,7 +12,7 @@ export const handleErrors = (error: any, message: string) => {
 }
 
 export const setupServer = (env?: string): Server => {
-    return new Server({ 
+    return new Server({
         environment: env ?? 'development',
 
         models: {
@@ -43,7 +43,8 @@ export const setupServer = (env?: string): Server => {
         },
 
         routes(): void {
-            this.urlPrefix = "https://diaries.app"
+            this.urlPrefix = "https://aj-diaries-app.netlify.app/"
+            // this.urlPrefix = "https://diaries.app"
 
             this.get('/diaries/entries/:id', diary.getEntries);
             this.get('/diaries/:id', diary.getDiaries);

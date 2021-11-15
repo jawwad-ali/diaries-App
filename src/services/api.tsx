@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
 import { showAlert } from '../util';
 
 const http: AxiosInstance = axios.create({
-    baseURL: "https://diaries.app"
+    baseURL: "https://aj-diaries-app.netlify.app/"
 })
 http.defaults.headers.post['Content-Type'] = 'application/json';
 
